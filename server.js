@@ -136,3 +136,5 @@ app.listen(PORT, () => {
     console.log(`   Model AI : ${MODEL}`);
     console.log(`   Static   : folder /public`);
 });
+
+module.exports = app;
