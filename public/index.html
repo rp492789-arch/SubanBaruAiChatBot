@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubanBaruPintar - Desa Suban Baru</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- =============================================
+         TOMBOL SCROLL TO TOP
+         ============================================= -->
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- =============================================
+         HEADER & NAVIGASI
+         ============================================= -->
+    <header>
+        <nav>
+            <div class="logo">SubanBaruPintar</div>
+
+            <!-- Hamburger (tampil di mobile) -->
+            <button class="hamburger-menu" id="hamburger-btn" aria-label="Buka menu navigasi">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Tautan Navigasi -->
+            <div class="nav-links" id="nav-links">
+                <button data-page="home" class="active" id="home-btn">🏠 Beranda</button>
+                <button data-page="profile">📜 Profil Desa</button>
+                <button data-page="events">🗓️ Dokumentasi Kegiatan</button>
+                <button data-page="chat">💬 Layanan Chatbot</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =============================================
+         KONTEN UTAMA
+         ============================================= -->
+    <main>
+
+        <!-- =========================================
+             HALAMAN BERANDA
+             ========================================= -->
+        <div id="home-page" class="page-content active">
+            <h2>Selamat Datang di Portal Desa Suban Baru!</h2>
+            <p class="welcome-message">
+                Portal Desa Suban Baru hadir sebagai sarana informasi resmi yang memudahkan masyarakat untuk mengetahui berbagai hal terkait desa. Melalui portal ini, warga dapat mengakses informasi profil desa, melihat rangkaian kegiatan yang telah dilaksanakan, serta memanfaatkan layanan chatbot untuk mendapatkan jawaban atas pertanyaan seputar desa dengan cepat dan mudah.
+            </p>
+
+            <!-- Preview: Profil Desa -->
+            <div id="profile-section" class="section-anchor home-section">
+                <div class="info-preview profile-preview">
+                    <div class="preview-text">
+                        <h3>Profil Desa Suban Baru</h3>
+                        <p>Desa Suban Baru merupakan sebuah kesatuan masyarakat hukum yang memiliki potensi dan sumber daya lokal untuk mendukung penyelenggaraan pemerintahan serta pembangunan desa. Arah pembangunan Desa Suban Baru berfokus pada terwujudnya tata kelola pemerintahan yang bersih, transparan, dan mandiri, sesuai dengan visi desa yaitu <em>"Terwujudnya Desa Suban Baru yang Bersih, Transparan, dan Mandiri menuju Masyarakat yang Sehat, Makmur dan Sejahtera."</em></p>
+                        <p>Visi ini mencerminkan komitmen desa dalam membangun pemerintahan yang dijalankan dengan niat tulus dan semangat pengabdian, mampu mempertanggungjawabkan setiap keputusan secara terbuka, serta mendorong masyarakat untuk mandiri melalui pemanfaatan keunggulan lokal dan penguasaan ilmu pengetahuan dan teknologi.</p>
+                        <button class="btn-primary" onclick="changePage('profile')">Lihat Informasi Profil Desa 📜</button>
+                    </div>
+                    <div class="preview-image">
+                        <img src="perangkat_desa.jpeg" alt="Perangkat Desa Suban Baru">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview: Dokumentasi Kegiatan -->
+            <div id="events-section" class="section-anchor home-section">
+                <div class="info-preview events-preview">
+                    <div class="preview-image">
+                        <img src="jadwal_kegiatan.jpg" alt="Aktivitas Kegiatan Desa">
+                    </div>
+                    <div class="preview-text">
+                        <h3>Dokumentasi Kegiatan Desa Suban Baru</h3>
+                        <p>Desa Suban Baru secara rutin melaksanakan berbagai kegiatan kemasyarakatan sebagai bentuk pelayanan dan tanggung jawab pemerintah desa kepada masyarakat. Kegiatan tersebut meliputi sosialisasi program pemerintah, pelaksanaan Musyawarah Desa (Musdes), penyaluran bantuan sembako kepada masyarakat, serta kegiatan pelayanan kesehatan melalui Posyandu.</p>
+                        <p>Karang Taruna Desa Suban Baru juga berperan aktif dalam kegiatan sosial, keagamaan, dan kepemudaan, termasuk peringatan Hari Kemerdekaan Republik Indonesia. Seluruh kegiatan ini bertujuan mendukung terwujudnya tata kelola pemerintahan desa yang bersih, transparan, dan berpihak pada masyarakat.</p>
+                        <button class="btn-primary" onclick="changePage('events')">Lihat Dokumentasi Kegiatan Desa 🗓️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview: Chatbot -->
+            <div id="chatbot-section" class="section-anchor home-section">
+                <div class="info-preview chatbot-preview">
+                    <div class="preview-text">
+                        <h3>Layanan Informasi Digital Desa Suban Baru</h3>
+                        <p>SubanBaruPintarChat adalah layanan asisten virtual berbasis kecerdasan buatan (AI) yang dikembangkan sebagai media pelayanan informasi digital Desa Suban Baru. Chatbot ini dirancang untuk membantu masyarakat dalam memperoleh informasi desa secara cepat, tepat, dan dapat diakses selama 24 jam.</p>
+                        <p>Melalui chatbot ini, masyarakat dapat dengan mudah menanyakan berbagai hal seperti profil desa, jadwal dan kegiatan desa, pelayanan administrasi, bantuan sosial, program pemerintah, serta informasi umum lainnya tanpa harus datang langsung ke kantor desa.</p>
+                        <p>Kehadiran SubanBaruPintarChat diharapkan dapat meningkatkan kualitas pelayanan desa, mempercepat penyampaian informasi, serta mendorong terwujudnya pemerintahan desa yang modern, terbuka, dan berbasis teknologi.</p>
+                        <button class="btn-primary btn-center" onclick="changePage('chat')">Mulai Layanan Chatbot 💬</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /home-page -->
+
+        <!-- =========================================
+             HALAMAN PROFIL DESA
+             ========================================= -->
+        <div id="profile-page" class="page-content">
+            <h2>📜 Profil Desa Suban Baru</h2>
+
+            <div class="profile-section">
+                <h3>Visi &amp; Misi</h3>
+                <p><strong>Visi:</strong> "Terwujudnya Desa Suban Baru Yang Bersih, Transparan, dan Mandiri menuju Masyarakat yang Sehat, Makmur dan Sejahtera".</p>
+                <p><strong>Misi:</strong></p>
+                <ul>
+                    <li>Mewujudkan dan mengembangkan kegiatan keagamaan untuk menambah keimanan dan ketaqwaan kepada Tuhan Yang Maha Esa.</li>
+                    <li>Mewujudkan dan mendorong terjadinya usaha-usaha kerukunan antar dan intern warga masyarakat dalam suasana saling menghargai dan menghormati.</li>
+                    <li>Menciptakan tata kelola pemerintahan yang baik berdasarkan demokratisasi, transparansi, penegakan hukum, berkeadilan, kesetaraan gender dan mengutamakan pelayanan kepada masyarakat.</li>
+                    <li>Membangun dan meningkatkan hasil pertanian dengan cara pembukaan dan perkerasan jalan kebun/jalan usaha tani, pemupukan, dan pola tanam yang baik.</li>
+                    <li>Meningkatkan pembangunan di bidang kesehatan untuk mendorong derajat kesehatan masyarakat agar dapat bekerja lebih optimal dan memiliki harapan hidup yang lebih panjang.</li>
+                    <li>Menata Pemerintahan Desa Suban Baru yang kompak dan bertanggung jawab dalam mengemban amanat masyarakat.</li>
+                    <li>Menumbuhkembangkan Kelompok Tani dan Gabungan Kelompok Tani serta bekerja sama dengan pihak-pihak yang dapat membantu meningkatkan pendapatan Petani.</li>
+                    <li>Menumbuhkembangkan usaha kecil dan menengah.</li>
+                    <li>Menjadikan masyarakat desa Suban Baru berbudi pekerti luhur, tangguh, sehat jasmani dan rokhaninya, cerdas, patriotik, berdisiplin, produktif, berjiwa iman dan bertaqwa serta demokratis.</li>
+                    <li>Membangun dan mendorong majunya bidang pendidikan baik formal maupun informal yang mudah diakses dan dinikmati seluruh warga masyarakat tanpa terkecuali.</li>
+                </ul>
+            </div>
+
+            <div class="profile-section">
+                <h3>Data Umum</h3>
+                <p><strong>Kepala Desa:</strong> PERI</p>
+                <p><strong>Kecamatan:</strong> Kelekar</p>
+                <p><strong>Kabupaten:</strong> Muara Enim</p>
+                <p><strong>Provinsi:</strong> Sumatera Selatan</p>
+                <p><strong>Jumlah Penduduk:</strong> 4.476 jiwa</p>
+            </div>
+        </div>
+        <!-- /profile-page -->
+
+        <!-- =========================================
+             HALAMAN DOKUMENTASI KEGIATAN
+             ========================================= -->
+        <div id="events-page" class="page-content">
+            <h2>🗓️ Dokumentasi Kegiatan Desa Suban Baru</h2>
+            <p>Berikut adalah dokumentasi berbagai kegiatan yang telah dilaksanakan di Desa Suban Baru.</p>
+
+            <!-- Galeri: Pemerintah Desa -->
+            <div class="event-card">
+                <h3>Galeri Kegiatan Pemerintah Desa Suban Baru</h3>
+                <span class="date">Dokumentasi Terbaru 2024 – 2026</span>
+                <p>Dokumentasi ini menampilkan berbagai kegiatan yang dilaksanakan Pemerintah Desa Suban Baru, seperti sosialisasi program pemerintah, Musyawarah Desa (Musdes), penyaluran BLT dan bantuan sembako, serta pelatihan-pelatihan khusus desa.</p>
+                <div class="event-images">
+                    <div><img src="pemerintah_1.jpeg"  alt="Kepala Desa Dan Pemerintah Desa" class="event-image"><p class="image-caption">Kepala Desa Dan Pemerintah Desa</p></div>
+                    <div><img src="pemerintah_2.jpeg"  alt="Pemerintah Desa dan Anggota BPD" class="event-image"><p class="image-caption">Kepala Desa, Pemerintah Desa dan Anggota BPD</p></div>
+                    <div><img src="pemerintah_3.jpeg"  alt="Rembuk Stunting 2024" class="event-image"><p class="image-caption">Rembuk Stunting – Strategi Penanggulangan Stunting Untuk Rencana Pembangunan Desa Tahun 2024</p></div>
+                    <div><img src="pemerintah_4.jpeg"  alt="Bantuan Sembako 2024" class="event-image"><p class="image-caption">Penyaluran bantuan sembako kepada warga lansia. Tahun 2024</p></div>
+                    <div><img src="pemerintah_5.jpeg"  alt="Pelantikan KPPS 2024" class="event-image"><p class="image-caption">Pelantikan Dan Pengambilan Sumpah Jabatan Anggota KPPS Tahun 2024</p></div>
+                    <div><img src="pemerintah_6.jpeg"  alt="Pelantikan KPPS 2024" class="event-image"><p class="image-caption">Pelantikan Dan Pengambilan Sumpah Jabatan Anggota KPPS Tahun 2024</p></div>
+                    <div><img src="pemerintah_7.jpeg"  alt="Sosialisasi K3 2025" class="event-image"><p class="image-caption">Sosialisasi K3 (Ketertiban, Kebersihan, dan Keindahan) Di Kecamatan. Tahun 2025</p></div>
+                    <div><img src="pemerintah_8.jpeg"  alt="Rembuk Stunting 2025" class="event-image"><p class="image-caption">Rembuk Stunting – Strategi Penanggulangan Stunting Untuk Rencana Pembangunan Desa Tahun 2025</p></div>
+                    <div><img src="pemerintah_9.jpeg"  alt="Rembuk Stunting 2025" class="event-image"><p class="image-caption">Rembuk Stunting – Strategi Penanggulangan Stunting Untuk Rencana Pembangunan Desa Tahun 2025</p></div>
+                    <div><img src="pemerintah_10.jpeg" alt="Bantuan Sembako 2025" class="event-image"><p class="image-caption">Penyaluran bantuan sembako kepada warga. Tahun 2025</p></div>
+                    <div><img src="pemerintah_11.jpeg" alt="MUSDESUS 2025" class="event-image"><p class="image-caption">MUSDESUS – Musyawarah Desa Khusus Tahun 2025</p></div>
+                    <div><img src="pemerintah_12.jpg"  alt="Penyuluhan Anti Narkoba 2025" class="event-image"><p class="image-caption">Penyuluhan Anti Narkoba Di Kecamatan, diikuti Karang Taruna. Tahun 2025</p></div>
+                    <div><img src="pemerintah_13.jpeg" alt="Festival Qasidah Rebana 2025" class="event-image"><p class="image-caption">Festival Qasidah Rebana &amp; Bintang Vokalis Tingkat Kabupaten Muara Enim – Juara 3. Tahun 2025</p></div>
+                    <div><img src="pemerintah_14.jpeg" alt="Pelantikan BPD PAW 2025" class="event-image"><p class="image-caption">Pelantikan BPD Pengganti Antar Waktu (PAW) Kec. Kelekar. Tahun 2025</p></div>
+                    <div><img src="pemerintah_15.jpeg" alt="Pelantikan BPD PAW 2025" class="event-image"><p class="image-caption">Pelantikan BPD Pengganti Antar Waktu (PAW) Kec. Kelekar. Tahun 2025</p></div>
+                    <div><img src="pemerintah_16.jpeg" alt="Pelatihan Koperasi 2025" class="event-image"><p class="image-caption">Pelatihan Peningkatan Pemahaman Perkoperasian – Koperasi Desa Merah Putih. Tahun 2025</p></div>
+                    <div><img src="pemerintah_17.jpeg" alt="Pelatihan Administrasi Desa 2025" class="event-image"><p class="image-caption">Pelatihan Peningkatan Kapasitas Administrasi Desa (Sekdes, Kaur Keuangan, Kaur TU &amp; Umum). Tahun 2025</p></div>
+                    <div><img src="pemerintah_18.jpeg" alt="Pelatihan BUMDES 2025" class="event-image"><p class="image-caption">Pelatihan Peningkatan Kapasitas Pengurus BUMDES – Pelaporan Akhir Tahun. 2025</p></div>
+                    <div><img src="pemerintah_19.jpeg" alt="Pelatihan Linmas 2025" class="event-image"><p class="image-caption">Pelatihan Peningkatan Kapasitas Satuan Perlindungan Masyarakat (Linmas). Tahun 2025</p></div>
+                    <div><img src="pemerintah_20.jpeg" alt="Musrenbang 2026" class="event-image"><p class="image-caption">Musrenbang – Musyawarah Rencana Pembangunan Tingkat Desa Tahun 2026 (Untuk Tahun 2027)</p></div>
+                    <div><img src="pemerintah_21.jpeg" alt="Panitia Resepsi 2026" class="event-image"><p class="image-caption">Karang Taruna dan Anggota BPD – Panitia Penerima Tamu Resepsi Pernikahan. Tahun 2026</p></div>
+                    <div><img src="pemerintah_22.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_23.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_24.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_25.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_26.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_27.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_28.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_29.jpeg" alt="BLT Tunai April 2026" class="event-image"><p class="image-caption">Pembagian BLT Tunai untuk Lansia dan Penderita Penyakit Menahun. 30 April 2026</p></div>
+                    <div><img src="pemerintah_30.jpeg" alt="Kunjungan Inspektorat 2026" class="event-image"><p class="image-caption">Kunjungan/Pemeriksaan Anggaran Desa oleh Inspektorat Muara Enim. 7 Mei 2026</p></div>
+                </div>
+            </div>
+
+            <!-- Galeri: PKK -->
+            <div class="event-card">
+                <h3>Galeri Kegiatan PKK Desa Suban Baru</h3>
+                <span class="date">Dokumentasi Terbaru 2022 – 2026</span>
+                <p>Kader PKK Desa Suban Baru berpartisipasi dalam berbagai lomba di tingkat kecamatan dan kabupaten sebagai upaya meningkatkan kreativitas, kebersamaan, dan peran perempuan dalam pembangunan desa, serta pelayanan kesehatan melalui Posyandu.</p>
+                <div class="event-images">
+                    <div><img src="pkk_1.jpeg"  alt="PKK 2022" class="event-image"><p class="image-caption">Pertemuan Rutin Tim Penggerak PKK – Foto bersama Adik-adik KKN. Tahun 2022</p></div>
+                    <div><img src="pkk_2.jpeg"  alt="PKK 2022" class="event-image"><p class="image-caption">Pertemuan Rutin Tim Penggerak PKK Kecamatan Kelekar. Tahun 2022</p></div>
+                    <div><img src="pkk_3.jpeg"  alt="PKK 2023" class="event-image"><p class="image-caption">Kunjungan PJ. Ketua TP PKK Kab. Muara Enim di Kecamatan Kelekar. Tahun 2023</p></div>
+                    <div><img src="pkk_4.jpeg"  alt="PKK 2023" class="event-image"><p class="image-caption">Kunjungan PJ. Ketua TP PKK Kab. Muara Enim di Kecamatan Kelekar. Tahun 2023</p></div>
+                    <div><img src="pkk_5.jpeg"  alt="Lomba B2SA 2023" class="event-image"><p class="image-caption">Lomba Penyajian Makanan B2SA – TP PKK Kec. Kelekar. Tahun 2023</p></div>
+                    <div><img src="pkk_6.jpeg"  alt="Lomba B2SA 2023" class="event-image"><p class="image-caption">Lomba Penyajian Makanan B2SA – TP PKK Kec. Kelekar. Tahun 2023</p></div>
+                    <div><img src="pkk_7.jpeg"  alt="Lomba B2SA 2023" class="event-image"><p class="image-caption">Lomba Penyajian Makanan B2SA – TP PKK Kec. Kelekar. Tahun 2023</p></div>
+                    <div><img src="pkk_8.jpeg"  alt="Lomba Desa 2023" class="event-image"><p class="image-caption">Kunjungan Tim Penilaian Lomba Desa Tingkat Kabupaten Muara Enim. Tahun 2023</p></div>
+                    <div><img src="pkk_9.jpeg"  alt="Lomba Cipta Menu 2023" class="event-image"><p class="image-caption">Lomba Cipta Menu B2SA – TP PKK Kec. Kelekar. Tahun 2023</p></div>
+                    <div><img src="pkk_10.jpeg" alt="Lomba Video Kreatif 2024" class="event-image"><p class="image-caption">Lomba Video Kreatif oleh PKK Se-Kecamatan Kelekar. Tahun 2024</p></div>
+                    <div><img src="pkk_11.jpeg" alt="Pelatihan PMT Baduta 2024" class="event-image"><p class="image-caption">Pelatihan PMT Baduta di Kabupaten Muara Enim. Tahun 2024</p></div>
+                    <div><img src="pkk_12.jpeg" alt="Lomba B2SA 2024" class="event-image"><p class="image-caption">Lomba Pentas Menu Makanan B2SA – TP PKK Kec. Kelekar. Tahun 2024</p></div>
+                    <div><img src="pkk_13.jpeg" alt="Lomba B2SA 2024" class="event-image"><p class="image-caption">Lomba Pentas Menu Makanan B2SA – TP PKK Kec. Kelekar. Tahun 2024</p></div>
+                    <div><img src="pkk_14.jpeg" alt="Lomba PKK 2025" class="event-image"><p class="image-caption">Lomba TP PKK Kecamatan Kelekar. Tahun 2025</p></div>
+                    <div><img src="pkk_15.jpeg" alt="Lomba PKK Kabupaten 2025" class="event-image"><p class="image-caption">Lomba TP PKK di Kabupaten Muara Enim. Tahun 2025</p></div>
+                    <div><img src="pkk_16.jpeg" alt="Kunjungan Ketua PKK 2025" class="event-image"><p class="image-caption">Kunjungan Kerja Ketua TP PKK Kab. Muara Enim ke Sekretariat TP PKK Kec. Kelekar. Tahun 2025</p></div>
+                    <div><img src="pkk_17.jpeg" alt="Bimtek Kader Posyandu 2025" class="event-image"><p class="image-caption">Bimbingan Teknis Peningkatan Kapasitas Kader Posyandu Terintegrasi Se-Kecamatan Kelekar. Tahun 2025</p></div>
+                    <div><img src="pkk_18.jpeg" alt="Sosialisasi 10 Program PKK 2025" class="event-image"><p class="image-caption">Sosialisasi 10 Program Pokok PKK kepada Tim Penggerak PKK Pokjar I–IV Se-Kecamatan Kelekar. Tahun 2025</p></div>
+                    <div><img src="pkk_19.jpeg" alt="Sosialisasi 10 Program PKK 2025" class="event-image"><p class="image-caption">Sosialisasi 10 Program Pokok PKK kepada Tim Penggerak PKK Pokjar I–IV Se-Kecamatan Kelekar. Tahun 2025</p></div>
+                    <div><img src="pkk_20.jpeg" alt="Imunisasi April 2026" class="event-image"><p class="image-caption">Kegiatan Imunisasi Anak Balita – Bersama Tim Puskesmas, PKK, dan Kader Posyandu. April 2026</p></div>
+                    <div><img src="pkk_21.jpeg" alt="Imunisasi April 2026" class="event-image"><p class="image-caption">Kegiatan Imunisasi Anak Balita – Bersama Tim Puskesmas, PKK, dan Kader Posyandu. April 2026</p></div>
+                    <div><img src="pkk_22.jpeg" alt="Imunisasi April 2026" class="event-image"><p class="image-caption">Kegiatan Imunisasi Anak Balita – Bersama Tim Puskesmas, PKK, dan Kader Posyandu. April 2026</p></div>
+                    <div><img src="pkk_23.jpeg" alt="Pertemuan Rutin PKK Mei 2026" class="event-image"><p class="image-caption">Pertemuan Rutin TP PKK Kecamatan Kelekar dan Desa Se-Kecamatan. Kantor Camat, Mei 2026</p></div>
+                    <div><img src="pkk_24.jpeg" alt="Pertemuan Rutin PKK Mei 2026" class="event-image"><p class="image-caption">Pertemuan Rutin TP PKK Kecamatan Kelekar dan Desa Se-Kecamatan. Kantor Camat, Mei 2026</p></div>
+                    <div><img src="pkk_25.jpeg" alt="Posyandu 8 Mei 2026" class="event-image"><p class="image-caption">Posyandu dan Imunisasi – Bayi-Balita, Ibu Hamil, dan Lansia. 08 Mei 2026</p></div>
+                    <div><img src="pkk_26.jpeg" alt="Posyandu 8 Mei 2026" class="event-image"><p class="image-caption">Posyandu dan Imunisasi – Bayi-Balita, Ibu Hamil, dan Lansia. 08 Mei 2026</p></div>
+                    <div><img src="pkk_27.jpeg" alt="Posyandu 8 Mei 2026" class="event-image"><p class="image-caption">Posyandu dan Imunisasi – Bayi-Balita, Ibu Hamil, dan Lansia. 08 Mei 2026</p></div>
+                    <div><img src="pkk_28.jpeg" alt="Posyandu 8 Mei 2026" class="event-image"><p class="image-caption">Posyandu dan Imunisasi – Bayi-Balita, Ibu Hamil, dan Lansia. 08 Mei 2026</p></div>
+                </div>
+            </div>
+
+            <!-- Galeri: Karang Taruna -->
+            <div class="event-card">
+                <h3>Galeri Kegiatan Karang Taruna Desa Suban Baru</h3>
+                <span class="date">Dokumentasi Terbaru 2021 – 2026</span>
+                <p>Karang Taruna Desa Suban Baru aktif berperan dalam berbagai kegiatan sosial, keagamaan, dan kepemudaan, termasuk peringatan hari besar Islam dan berbagai perlombaan pada peringatan Hari Kemerdekaan Republik Indonesia.</p>
+                <div class="event-images">
+                    <div><img src="karang_taruna1.jpg"  alt="Karang Taruna 2021" class="event-image"><p class="image-caption">Panitia Lomba dalam Rangka Memperingati Isra' Mi'raj Nabi Muhammad SAW. Tahun 2021</p></div>
+                    <div><img src="karang_taruna2.jpg"  alt="Karang Taruna 2021" class="event-image"><p class="image-caption">Foto Bersama Ustadz, DKM Masjid dan Remaja Masjid dalam Rangka Isra' Mi'raj. Tahun 2021</p></div>
+                    <div><img src="karang_taruna3.jpg"  alt="HUT RI-76 2021" class="event-image"><p class="image-caption">Pembukaan Lomba dalam Rangka HUT RI-76. Tahun 2021</p></div>
+                    <div><img src="karang_taruna4.jpg"  alt="HUT RI-76 2021" class="event-image"><p class="image-caption">Penutupan dan Pembagian Hadiah HUT RI-76. Tahun 2021</p></div>
+                    <div><img src="karang_taruna5.jpg"  alt="Maulid 2021" class="event-image"><p class="image-caption">Foto Bersama Ustadz dalam Rangka Maulid Nabi Muhammad SAW. Tahun 2021</p></div>
+                    <div><img src="karang_taruna6.jpg"  alt="Maulid 2021" class="event-image"><p class="image-caption">Foto Bersama Karang Taruna dan IRMAS dalam Rangka Maulid Nabi. Tahun 2021</p></div>
+                    <div><img src="karang_taruna7.jpg"  alt="HUT RI-78 2023" class="event-image"><p class="image-caption">Foto Bersama Kepala Desa dan Panitia Lomba HUT RI-78. Tahun 2023</p></div>
+                    <div><img src="karang_taruna8.jpg"  alt="HUT RI-78 2023" class="event-image"><p class="image-caption">Foto Bersama Perangkat Desa, Petugas Upacara, dan Karang Taruna HUT RI-78. Tahun 2023</p></div>
+                    <div><img src="karang_taruna9.jpg"  alt="HUT RI-79 2024" class="event-image"><p class="image-caption">Foto Bersama Panitia Lomba HUT RI-79. Tahun 2024</p></div>
+                    <div><img src="karang_taruna10.jpg" alt="HUT RI-79 2024" class="event-image"><p class="image-caption">Foto Bersama Perangkat Desa, Petugas Upacara, dan Karang Taruna HUT RI-79. Tahun 2024</p></div>
+                    <div><img src="karang_taruna11.jpg" alt="Safari Dakwah 2025" class="event-image"><p class="image-caption">Safari Dakwah – Dzikir dan Muhasabah Bersama Habib Ahmad Al Habsyi. Tahun 2025</p></div>
+                    <div><img src="karang_taruna12.jpg" alt="HUT RI-80 2025" class="event-image"><p class="image-caption">Foto Bersama Panitia Lomba HUT RI-80. Tahun 2025</p></div>
+                    <div><img src="karang_taruna13.jpg" alt="HUT RI-80 2025" class="event-image"><p class="image-caption">Foto Bersama Perangkat Desa, Petugas Upacara, dan Karang Taruna HUT RI-80. Tahun 2025</p></div>
+                    <div><img src="karang_taruna14.jpg" alt="Karnaval HUT RI-80 2025" class="event-image"><p class="image-caption">Foto Bersama Panitia Karnaval HUT RI-80. Tahun 2025</p></div>
+                    <div><img src="karang_taruna15.jpg" alt="Karnaval HUT RI-80 2025" class="event-image"><p class="image-caption">Foto Bersama Seluruh Peserta Karnaval HUT RI-80. Tahun 2025</p></div>
+                    <div><img src="karang_taruna16.jpg" alt="Pentas Seni HUT RI-80 2025" class="event-image"><p class="image-caption">Panitia Lomba Pentas Seni dan Pembagian Hadiah HUT RI-80. Tahun 2025</p></div>
+                    <div><img src="karang_taruna17.jpeg" alt="Festival Qasidah 2025" class="event-image"><p class="image-caption">Festival Qasidah Rebana &amp; Bintang Vokalis Tingkat Kabupaten Muara Enim – Juara 3. Tahun 2025</p></div>
+                    <div><img src="karang_taruna18.jpeg" alt="PIK Remaja 2026" class="event-image"><p class="image-caption">Pelatihan Pembinaan PIK Remaja Se-Kecamatan Kelekar. Tahun 2026</p></div>
+                    <div><img src="karang_taruna19.jpeg" alt="Idul Fitri 2026" class="event-image"><p class="image-caption">Foto Bersama Karang Taruna Setelah Sholat Idul Fitri 1447 H. Tahun 2026</p></div>
+                    <div><img src="karang_taruna20.jpeg" alt="Resepsi 2026" class="event-image"><p class="image-caption">Foto Bersama Pengantin dan Panitia pada Acara Resepsi Pernikahan. Tahun 2026</p></div>
+                    <div><img src="karang_taruna21.jpeg" alt="Resepsi 2026" class="event-image"><p class="image-caption">Karang Taruna dan BPD – Panitia Penerima Tamu Malam Hari Resepsi Pernikahan. Tahun 2026</p></div>
+                    <div><img src="karang_taruna22.jpeg" alt="Resepsi 2026" class="event-image"><p class="image-caption">Foto Bersama Pengantin dan Panitia Penerima Tamu Malam Hari Resepsi Pernikahan. Tahun 2026</p></div>
+                </div>
+            </div>
+        </div>
+        <!-- /events-page -->
+
+        <!-- =========================================
+             HALAMAN CHATBOT
+             ========================================= -->
+        <div id="chat-page" class="page-content">
+            <h2>💬 SubanBaruPintarChat</h2>
+            <p style="text-align:center; margin-bottom:15px; font-size:0.9em;">
+                Halo! Selamat datang di SubanBaruPintarChat, asisten virtual Desa Suban Baru.
+            </p>
+            <div id="chat-history"></div>
+            <form id="chat-form" autocomplete="off">
+                <input type="text" id="user-input" placeholder="Tulis pesan Anda di sini..." required>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+        <!-- /chat-page -->
+
+    </main>
+
+    <!-- =============================================
+         FOOTER
+         ============================================= -->
+    <footer>
+        &copy; Desa Suban Baru, Kec. Kelekar, Kab. Muara Enim, Sumatera Selatan &mdash; SubanBaruPintar.
+    </footer>
+
+    <!-- =============================================
+         LOADER OVERLAY
+         ============================================= -->
+    <div id="loader" class="loader" role="status" aria-live="polite">
+        <div class="spinner"></div>
+        <p>SubanBaruPintarChat sedang memproses...</p>
+    </div>
+
+    <!-- =============================================
+         JAVASCRIPT (urutan penting)
+         ============================================= -->
+    <script src="js/navigation.js"></script>
+    <script src="js/chatbot.js"></script>
+
+</body>
+</html>
