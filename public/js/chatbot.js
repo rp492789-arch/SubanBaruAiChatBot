@@ -135,7 +135,7 @@
         setTimeout(function () {
             if (chatHistory && chatHistory.innerHTML.trim() === '') {
                 appendMessage(
-                    'Halo! Selamat datang di **SubanBaruPintarChat** 👋\n\nSaya siap membantu Anda mendapatkan informasi seputar Desa Suban Baru.\n\nSilakan tanyakan mengenai:\n1. Surat menyurat desa\n2. Jadwal kegiatan dan musyawarah\n3. Bantuan sosial dan administrasi kependudukan\n4. Pengajuan aspirasi dan pengaduan\n5. Kepemudaan, UMKM, dan pertanian lokal',
+                    'Halo! Saya SubanBaruPintarChat, asisten virtual Desa Suban Baru. Ada yang bisa saya bantu?',
                     'bot'
                 );
             }
